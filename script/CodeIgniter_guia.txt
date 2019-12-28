@@ -1,0 +1,29 @@
+01.Descargar y descomprimir.
+02.Cambiar de nombre a carpeta
+03.application/config/autoload.php
+	$autoload['libraries'] = array('database','session');
+	$autoload['helper'] = array('url');
+
+mysql> 
+grant all privileges on *.* 
+to 'php'@'%' 
+identified by '2018' 
+with grant option;
+
+04.Crear la base y la tabla correspondiente
+ https://www.quora.com/How-do-I-reset-the-root-password-in-MySQL-8
+ 
+05.application/config/database.php
+06.application/config/config.php
+	$config['base_url'] = 'http://localhost/php3/ci_mensajes/';
+	apuntar a la ruta en la cual se visualiza nuestro proyecto
+
+07.agregar en application/config/routes.php
+
+$route['mensajes/ver/(:num)'] = 'mensajes/ver/$1';
+$route['mensajes/agregar'] = 'mensajes/agregar';
+$route['mensajes/editar/(:num)'] = 'mensajes/editar/$1';
+$route['mensajes/borrar/(:num)'] = 'mensajes/borrar/$1';
+$route['mensajes'] = 'mensajes';
+
+08. en el modelo, crear las acciones correspondientes
